@@ -1,0 +1,98 @@
+
+.container {    
+
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    width: 800px;
+}
+
+.cover > img {
+    width: 280px;
+}
+
+.ui-accordion-content {
+    height: 280px;
+}
+
+:focus {
+    outline: none;
+}
+
+element.style {
+    width: none;
+    height: none;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: inline-block;
+}
+
+
+
+
+.albums {
+    height: inherit;
+    display: inline-block;
+    padding-left: 30px;
+    float: right;
+    margin-right: 20%;
+}
+
+.albums > .header {
+    list-style: none;
+    color: #666;
+    font-size: 20px;
+    line-height: 55px;
+    cursor: pointer;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+
+
+.player-box {
+    display: inline-block;
+    margin-top: 30px;
+    width: 22%;
+}
+
+.album {
+    padding-left: 20px;
+}
+
+.menu, .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu {
+    height: 58px;
+}
+.menu li {
+    min-width: 160px;
+}
+
+.menu li {
+    color: #666;
+    display: block;
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 22px;
+    padding-bottom: 0.5em;
+
+
+}
+
+.menu li:hover{
+    cursor: pointer;
+}
+.menu ul:hover{
+    cursor: default;
+}

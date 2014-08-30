@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+
+      <title>Stereo Skverna</title>
+      <script type="text/javascript" src="js/lib/jquery-1.7.2.min.js"></script>
+      <script src="js/lib/jquery-ui.js"></script>
+
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="css/player.css">
+      
+      <script src="js/albums.js"></script>      
+      <script src="js/player.js"></script>
+
+  </head>
+  <body>
+
+
+    <div class="container">
+
+
+      <div class="player-box">  
+
+        <audio id="song" ontimeupdate = "updateTime()">
+          <source id="songmp3" src="audio/album1/1.mp3" type="audio/mp3"/>
+          <source id = "songogg" src="audio/album1/1.ogg" type="audio/ogg"/>
+        </audio>
+
+
+        <div class="player">
+
+          <div class="radial-progress">
+            <div class="circle">
+              <div class="mask full">
+                <div class="fill"></div>
+              </div>
+              <div class="mask half">
+                <div class="fill"></div>
+                <div class="fill fix"></div>
+              </div>
+              <div class="underlay"></div>
+              <div class="overlay"></div>
+            </div>
+            <div class="songPlayPause playButton"></div>
+          </div>
+        </div>
+
+        <!-- Div that updates with current song time while playing -->
+        <div id="songTime" class="hidden">0:00 / 0:00</div>
+
+        <div class="album">
+          <ul class="menu album1_list">
+            <li>
+              <ul class="album1_inner_list">
+                <li>Song 01</li>
+                <li>Song 02</li>
+                <li>Song 03</li>   
+                <li>Song 04</li>
+                <li>Song 05</li>
+                <li>Song 06</li>
+                <li>Song 07</li>
+                <li>Song 08</li>
+                <li>Song 09</li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="menu album2_list hidden">
+            <li>
+              <ul class="album2_inner_list">
+                <li>Song 01</li>
+                <li>Song 02</li>
+                <li>Song 03</li>
+                <li>Song 04</li>
+              </ul>
+            </li>
+          </ul>                    
+          <ul class="menu album3_list hidden">
+            <li>
+              <ul class="album3_inner_list">
+                <li>Song 01</li>
+                <li>Song 02</li>
+                <li>Song 03</li>
+                <li>Song 04</li>
+              </ul>                        
+            </li>
+          </ul>
+        </div>   
+      </div> 
+      <!-- end of playerbox --> 
+
+      <div class="albums">
+        <p class="album1 header">Album 1</p>
+        <div class="cover">
+          <img src="./img/covers/kaltsm.jpg">
+        </div>
+        <p class="album2 header">Album 2</p>
+        <div class="cover">
+          <img src="./img/covers/kaltsm.jpg">
+        </div>
+        <p class="album3 header">Album 3</p>
+        <div class="cover">
+          <img src="./img/covers/kaltsm.jpg">
+        </div>
+      </div>
+
+    </div>
+    <!-- end of container -->
+
+  </body>
+</html>
