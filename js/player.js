@@ -28,6 +28,7 @@ jQuery(document).ready(function() {
   var i;
   var album1List = $('ul.album1_inner_list > li');
   var album2List = $('ul.album2_inner_list > li');
+  var album3List = $('ul.album3_inner_list > li');
   var songPlayPause = $('.songPlayPause');
   var fill = $('.fill');
   var radial = $('.radial-progress');
@@ -44,21 +45,31 @@ jQuery(document).ready(function() {
 
     album1List.click(function () {
 
-        activeSong.pause();
+      activeSong.pause();
 
-        initalbum(album1List.index( $(this) ), "audio/album1/");
-        activeSong.load();
-        activeSong.play();
-        songPlayPause.removeClass('playButton').addClass('pauseButton');
+      initalbum(album1List.index( $(this) ), "audio/album1/");
+      activeSong.load();
+      activeSong.play();
+      songPlayPause.removeClass('playButton').addClass('pauseButton');
     });
 
     album2List.click(function () {
-        activeSong.pause();
+      activeSong.pause();
 
-        initalbum(album2List.index( $(this) ), "audio/album2/");
-        activeSong.load();
-        activeSong.play();
-        songPlayPause.removeClass('playButton').addClass('pauseButton');
+      initalbum(album2List.index( $(this) ), "audio/album2/");
+      activeSong.load();
+      activeSong.play();
+      songPlayPause.removeClass('playButton').addClass('pauseButton');
+
+    });
+
+    album3List.click(function () {
+      activeSong.pause();
+
+      initalbum(album3List.index( $(this) ), "audio/album3/");
+      activeSong.load();
+      activeSong.play();
+      songPlayPause.removeClass('playButton').addClass('pauseButton');
 
     });
 

@@ -1,6 +1,8 @@
+body {
+    background-color: #ecdaf8;
+}
 
 .container {    
-
     font-family: 'Open Sans', sans-serif;
     display: block;
     margin-left: auto;
