@@ -24,7 +24,6 @@ function updateTime(){
 
 jQuery(document).ready(function() {
 
-
   var song;
   var i;
   var album1List = $('ul.album1_inner_list > li');
@@ -33,7 +32,7 @@ jQuery(document).ready(function() {
   var fill = $('.fill');
   var radial = $('.radial-progress');
 
-
+  
   var activeSong;
 
   activeSong = document.getElementById('song');
@@ -104,33 +103,39 @@ jQuery(document).ready(function() {
   }
 
   function setSongPosition(obj,e) {
-      var evtobj=window.event? event : e;
-      var posX = evtobj.pageX - obj.offsetLeft;
-      var posY = evtobj.pageY - obj.offsetTop;
-      var centerX = 60;
-      var centerY = 60;
-      var sideCsq = centerY*centerY;
-      var sideBsq = (posX-centerX)*(posX-centerX)+(posY-centerY)*(posY-centerY);
-      var sideAsq = (posX-centerX)*(posX-centerX)+(posY)*(posY);
+    // If the player is circle, its width = height, so height is skipped
+    var playerWidth = radial.width(); // width of circle player
+    var centerX = playerWidth/2; // horisontal coordinate of center
+    var centerY = playerWidth/2; // vertical coordinate of center
+    var playWidth = songPlayPause.width(); //width of play button
+    var minClickCoord = centerX - (playWidth/2); // minimum coordinate where clicking will trigger play/pause
+    var maxClickCoord = centerX + (playWidth/2);
 
-      var squares = (sideBsq + sideCsq - sideAsq);
+    var evtobj=window.event? event : e;
+    var posX = evtobj.pageX - obj.offsetLeft;
+    var posY = evtobj.pageY - obj.offsetTop;
+    var sideCsq = centerY*centerY;
+    var sideBsq = (posX-centerX)*(posX-centerX)+(posY-centerY)*(posY-centerY);
+    var sideAsq = (posX-centerX)*(posX-centerX)+(posY)*(posY);
 
-      var bc2 = Math.sqrt(sideBsq*sideCsq)*2;
+    var squares = (sideBsq + sideCsq - sideAsq);
 
-      var cos = squares/bc2;
+    var bc2 = Math.sqrt(sideBsq*sideCsq)*2;
 
-      var acosA = Math.acos(cos);
+    var cos = squares/bc2;
 
-      var grad;
+    var acosA = Math.acos(cos);
 
-      if (posX >= centerX) {grad = (acosA*180)/Math.PI;}
-      else {grad = (360-(acosA*180)/Math.PI);}
+    var grad;
 
-      var percentage = grad/360;
+    if (posX >= centerX) {grad = (acosA*180)/Math.PI;}
+    else {grad = (360-(acosA*180)/Math.PI);}
 
-      // Set postion in song manually
-      if ((44>posX || posX>76) || (44>posY || posY>76)) {
-        setLocation(percentage); }
+    var percentage = grad/360;
+
+    // Set postion in song manually
+    if ((minClickCoord > posX || posX > maxClickCoord) || (minClickCoord > posY || posY > maxClickCoord)) {
+      setLocation(percentage); }
   }
 
   activeSong.addEventListener("ended", function() {

@@ -11,7 +11,7 @@ body {
 .radial-progress {
   width: 120px;
   height: 120px;
-  background-color: #777;
+  background-color: #aaa;
   border-radius: 50%;
   box-shadow: 0 0 30px #555;
 
@@ -32,7 +32,7 @@ body {
 }
 .radial-progress .circle .mask .fill {
   clip: rect(0px, 59px, 120px, 0px);
-  background-color: #9ab;
+  background-color: #ddc885;
 
 }
 
@@ -43,7 +43,7 @@ body {
   border-radius: 50%;
   margin-left: 5px;
   margin-top: 5px;
-  background-color: #888;
+  background-color: #a3c4b9;
 
 }
 
@@ -61,21 +61,21 @@ body {
 
 
 .songPlayPause {
-  width: 32px;
-  height: 32px;
+  width: 60px;
+  height: 60px;
   position: absolute;
-  margin-left: 44px;
-  margin-top: 44px;
+  margin-left: 30px;
+  margin-top: 30px;
   border-radius: 50%;
   /*box-shadow: 6px 6px 10px rgba(0,0,0,0.2);*/
 }
 
 .playButton {
-    background: #666 url('../img/player/play.png') no-repeat center;
-    background-position: 3px 1px;
+  background: #eee url('../img/player/play.png') no-repeat center;
+  background-position: center;
 
 }
 
 .pauseButton {
-    background: #666 url('../img/player/pause.png') no-repeat center;
+  background: #eee url('../img/player/pause.png') no-repeat center;
 }
