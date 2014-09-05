@@ -9,3 +9,5 @@ Position of loader is adjustable.  The idea of implementation of a circle loader
 Playlists are separated into albums. Switching to composition in playlist can be done by clicking.
 
 List of albums is displayed in accordeon, so that user can see, whish album he is on currently.
+
+Supported formats are mp3 and ogg. Also, one can easily add new necessary format support.
