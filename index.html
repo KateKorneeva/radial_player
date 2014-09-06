@@ -16,21 +16,22 @@
   </head>
   <body>
 
-
     <div class="container">
-
-
+      
+      <!-- Player-box is the div containing player and current playlist -->
       <div class="player-box">  
 
         <audio id="song" ontimeupdate = "updateTime()">
+          <!-- The following track is played by default -->
           <source id="songmp3" src="audio/album1/1.mp3" type="audio/mp3"/>
+          <!-- Ogg format is used if browser doesn't support mp3 -->
           <source id = "songogg" src="audio/album1/1.ogg" type="audio/ogg"/>
         </audio>
 
 
         <div class="player">
 
-          <div class="radial-progress">
+          <div class="loader">
             <div class="circle">
               <div class="mask full">
                 <div class="fill"></div>
@@ -40,16 +41,17 @@
                 <div class="fill fix"></div>
               </div>
               <div class="underlay"></div>
-              <div class="overlay"></div>
             </div>
             <div class="songPlayPause playButton"></div>
           </div>
         </div>
 
-        <!-- Div that updates with current song time while playing -->
+        <!-- Div that updates with current song time while playing.  
+        If needed to be visible, remove class = "hidden" -->
         <div id="songTime" class="hidden">0:00 / 0:00</div>
 
-        <div class="album">
+        <!-- This div contains all playlists -->
+        <div class="playlists">
           <ul class="menu album1_list">
             <li>
               <ul class="album1_inner_list">
@@ -82,10 +84,12 @@
               </ul>                        
             </li>
           </ul>
-        </div>   
+        </div>  
+        <!-- end of playlists -->
       </div> 
-      <!-- end of playerbox --> 
+      <!-- end of player-box --> 
 
+      <!-- This div contains a list of albums -->
       <div class="albums">
         <p class="album1 header">Album 1</p>
         <div class="cover">
@@ -100,6 +104,7 @@
           <img src="./img/covers/cover3.jpg">
         </div>
       </div>
+      <!-- end of albums -->
 
     </div>
     <!-- end of container -->

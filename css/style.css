@@ -1,51 +1,51 @@
+/*General styles*/
+
 body {
-    background-color: #ecdaf8;
+    background-color: #ddd;
+    margin-top: 0px;
 }
 
 .container {    
     font-family: 'Open Sans', sans-serif;
-    display: block;
+    background-color: #eee;
+    /* The folloving three rules make container to be centered*/
     margin-left: auto;
     margin-right: auto; 
     width: 800px;
 }
 
 .cover > img {
-    width: 280px;
-}
-
-.ui-accordion-content {
     height: 280px;
 }
 
+.ui-accordion-content {
+    /* Should be same as height of .cover > img */
+    height: 280px;
+}
+
+/* Overrides yellow border for jquery ui accordeon sections */
 :focus {
     outline: none;
 }
 
-element.style {
-    width: none;
-    height: none;
-}
-
-
-
+/* Use this class to hide elements ... */
 .hidden {
     display: none;
 }
 
+/* ... and this sets them visible */
 .visible {
     display: inline-block;
 }
 
 
-
-
+/* Styles for list of albums */
 .albums {
     height: inherit;
     display: inline-block;
     padding-left: 30px;
     float: right;
-    margin-right: 20%;
+    margin-right: 15%;
 }
 
 .albums > .header {
@@ -58,15 +58,12 @@ element.style {
     -webkit-margin-after: 0;
 }
 
-
+/* Styles for section with player and playlist*/
 .player-box {
     display: inline-block;
     margin-top: 30px;
+    margin-left: 15%;
     width: 22%;
-}
-
-.album {
-    padding-left: 20px;
 }
 
 .menu, .menu ul {
@@ -85,16 +82,11 @@ element.style {
     color: #666;
     display: block;
     text-decoration: none;
-    font-size: 17px;
-    line-height: 22px;
-    padding-bottom: 0.5em;
-
-
+    font-size: 1.1em;
+    line-height: 1.7em;
 }
 
+/* Makes pointer reflect an actve element when hovering song */
 .menu li:hover{
     cursor: pointer;
-}
-.menu ul:hover{
-    cursor: default;
 }

@@ -1,23 +1,26 @@
-body {
-    margin-top: 0px;
-}
+/*Player-specific styles*/
 
 .player {
-    height: 140px;
-    width: 280px;
-    margin-left: -7px;
+  height: 140px;
+  width: 280px;
+  margin-left: -7px;
 }
 
-.radial-progress {
-  width: 120px;
+/* This is seen as an empty loader when song is being played */
+.loader {
+  /* If player is a circle, width=height */
+  width: 120px; 
   height: 120px;
   background-color: #aaa;
   border-radius: 50%;
   box-shadow: 0 0 30px #555;
 
 }
-.radial-progress .circle .mask,
-.radial-progress .circle .fill {
+
+/* This is seen as a loading bar when song is being played*/
+.loader .circle .mask,
+.loader .circle .fill {
+  /* Should be equal to width and height of .loader*/
   width: 120px;
   height: 120px;
   position: absolute;
@@ -27,13 +30,14 @@ body {
   transition: transform 0.5s;
   -webkit-backface-visibility: hidden;
 }
-.radial-progress .circle .mask {
+
+.loader .circle .mask {
   clip: rect(0px, 120px, 120px, 60px);
 }
-.radial-progress .circle .mask .fill {
+
+.loader .circle .mask .fill {
   clip: rect(0px, 59px, 120px, 0px);
   background-color: #ddc885;
-
 }
 
 .underlay {
@@ -44,19 +48,7 @@ body {
   margin-left: 5px;
   margin-top: 5px;
   background-color: #a3c4b9;
-
 }
-
-.overlay {
-  width: 106px;
-  height: 106px;
-  position: absolute;
-  border-radius: 50%;
-  margin-left: 8px;
-  margin-top: 8px;
-}
-
-
 
 .songPlayPause {
   width: 60px;

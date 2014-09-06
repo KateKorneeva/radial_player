@@ -2,7 +2,7 @@ function updateTime(){
     var activeSong = document.getElementById('song');
     var currentSeconds = (Math.floor(activeSong.currentTime % 60) < 10 ? '0' : '') + Math.floor(activeSong.currentTime % 60);
     var currentMinutes = Math.floor(activeSong.currentTime / 60);
-    var radial = $('.radial-progress');
+    var radial = $('.loader');
 
     document.getElementById('songTime').innerHTML = currentMinutes + ":" + currentSeconds + ' / ' + Math.floor(activeSong.duration / 60) + ":" + (Math.floor(activeSong.duration % 60) < 10 ? '0' : '') + Math.floor(activeSong.duration % 60);
 
@@ -31,7 +31,7 @@ jQuery(document).ready(function() {
   var album3List = $('ul.album3_inner_list > li');
   var songPlayPause = $('.songPlayPause');
   var fill = $('.fill');
-  var radial = $('.radial-progress');
+  var radial = $('.loader');
 
   
   var activeSong;
