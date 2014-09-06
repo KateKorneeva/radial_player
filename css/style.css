@@ -1,16 +1,21 @@
 /*General styles*/
 
 body {
-    background-color: #eee;
-    margin-top: 0px;
+    background-color: #888;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .container {    
-    font-family: 'Open Sans', sans-serif;
-    /* The folloving three rules make container to be centered*/
     margin-left: auto;
     margin-right: auto; 
-    width: 800px;
+    width: 600px;
+}
+
+header {
+    font-size: 4em;
+    color: #f8e199;
+    font-weight: bold;
+    margin-bottom: 30px;
 }
 
 .cover > img {
@@ -34,18 +39,18 @@ body {
 
 /* Styles for list of albums */
 .albums {
+    float: right;
     height: inherit;
     display: inline-block;
-    padding-left: 30px;
-    float: right;
     margin-right: 15%;
 }
 
 .albums > .header {
     list-style: none;
-    color: #666;
-    font-size: 20px;
-    line-height: 55px;
+    font-size: 1.5em;
+    line-height: 1.7em;
+    font-weight: bold;
+    color: #ddc885;
     cursor: pointer;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
@@ -54,32 +59,31 @@ body {
 /* Styles for section with player and playlist*/
 .player-box {
     display: inline-block;
-    margin-top: 30px;
-    margin-left: 15%;
-    width: 22%;
+    margin-left: 15px;
 }
 
-.menu, .menu ul {
+.playlist, .playlist ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-.menu {
+.playlist {
     height: 58px;
 }
-.menu li {
+.playlist li {
     min-width: 160px;
 }
 
-.menu li {
-    color: #666;
+.playlist li {
     display: block;
     text-decoration: none;
-    font-size: 1.1em;
-    line-height: 1.7em;
+    font-size: 1.2em;
+    line-height: 1.8em;
+    font-weight: bold;
+    color: #ddc885;
 }
 
 /* Makes pointer reflect an actve element when hovering song */
-.menu li:hover{
+.playlist li:hover{
     cursor: pointer;
 }

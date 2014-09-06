@@ -2,8 +2,7 @@
 
 .player {
   height: 140px;
-  width: 280px;
-  margin-left: -7px;
+  margin-left: -15px;
 }
 
 /* This is seen as an empty loader when song is being played */
