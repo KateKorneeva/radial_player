@@ -1,13 +1,15 @@
+$(document).ready(function() {
 
-$(document).ready(function(){  
-	
 	var album1_list = $('.album1_list');
 	var album2_list = $('.album2_list');
 	var album3_list = $('.album3_list');
 
+	// Delivers accordeon effect to the list of albums
 	$( ".albums" ).accordion();
 
-
+	// When clicking on album, shows playlist of this album
+	// and hides playlists of other albums.
+	// If the quantity of albums is bigger than 3, following should be rewritten.
 	$('.album1').click(function() {
 		album1_list.removeClass('hidden');
 		if(!album2_list.hasClass('hidden')) {

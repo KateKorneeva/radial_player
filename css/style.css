@@ -1,13 +1,12 @@
 /*General styles*/
 
 body {
-    background-color: #ddd;
+    background-color: #eee;
     margin-top: 0px;
 }
 
 .container {    
     font-family: 'Open Sans', sans-serif;
-    background-color: #eee;
     /* The folloving three rules make container to be centered*/
     margin-left: auto;
     margin-right: auto; 
@@ -32,12 +31,6 @@ body {
 .hidden {
     display: none;
 }
-
-/* ... and this sets them visible */
-.visible {
-    display: inline-block;
-}
-
 
 /* Styles for list of albums */
 .albums {
