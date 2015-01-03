@@ -153,5 +153,4 @@ jQuery(document).ready(function() {
     activeSong.currentTime = 0;
     $('.songPlayPause').removeClass('pauseButton').addClass('playButton');
   });
-
 });
