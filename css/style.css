@@ -22,20 +22,12 @@ header {
     height: 280px;
 }
 
-.ui-accordion-content {
-    /* Should be same as height of .cover > img */
-    height: 280px;
-}
 
-/* Overrides yellow border for jquery ui accordeon sections */
-:focus {
-    outline: none;
-}
-
-/* Use this class to hide elements ... */
+/* Use this class to hide elements*/
 .hidden {
     display: none;
 }
+
 
 /* Styles for list of albums */
 .albums {
@@ -45,16 +37,20 @@ header {
     margin-right: 15%;
 }
 
-.albums > .header {
+.albums .header {
     list-style: none;
     font-size: 1.5em;
     line-height: 1.7em;
     font-weight: bold;
     color: #ddc885;
-    cursor: pointer;
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
+    margin-bottom: 0;
+    margin-top: 0;
 }
+
+.section-title {
+    transition:all linear 0.3s;
+}
+
 
 /* Styles for section with player and playlist*/
 .player-box {

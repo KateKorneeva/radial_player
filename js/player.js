@@ -10,7 +10,7 @@ function updateTime(){
     var percentageOfSlider = (percentageOfSong)*180;
     
     var transformStyles = ['-webkit-transform', '-ms-transform', 'transform'];
-    window.randomize = function() {
+    window.rotate = function() {
       var fillRotation = percentageOfSlider;
       var fixRotation = percentageOfSlider * 2;
       for(i in transformStyles) {
@@ -18,8 +18,8 @@ function updateTime(){
         $('.circle .fill.fix').css(transformStyles[i], 'rotate(' + fixRotation + 'deg)');
       }
     }
-    setTimeout(window.randomize, 200);
-    radial.click(window.randomize);
+    setTimeout(window.rotate, 200);
+    radial.click(window.rotate);
 }
 
 jQuery(document).ready(function() {
