@@ -31,7 +31,8 @@ header {
 
 /* Styles for list of albums */
 .albums {
-    float: right;
+    /*float: right;*/
+    position: absolute;
     height: inherit;
     display: inline-block;
     margin-right: 15%;
