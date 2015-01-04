@@ -32,6 +32,7 @@ header {
 /* Styles for list of albums */
 .albums {
     float: right;
+    position: absolute;
 }
 
 .albums .header {
