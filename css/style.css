@@ -9,6 +9,7 @@ body {
     margin-left: auto;
     margin-right: auto; 
     width: 650px;
+    position: relative;
 }
 
 header {
@@ -31,8 +32,9 @@ header {
 
 /* Styles for list of albums */
 .albums {
-    float: right;
-    height: inherit;
+    position: absolute;
+    top: 100px;
+    right: 100px;
 }
 
 .albums .header {
