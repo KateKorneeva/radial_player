@@ -121,10 +121,11 @@ jQuery(document).ready(function() {
     var playWidth = songPlayPause.width(); //width of play button
     var minClickCoord = centerX - (playWidth/2); // minimum coordinate where clicking will trigger play/pause
     var maxClickCoord = centerX + (playWidth/2);
+    var offset = radial.offset();
 
     var evtobj=window.event? event : e;
-    var posX = evtobj.pageX - obj.offsetLeft;
-    var posY = evtobj.pageY - obj.offsetTop;
+    var posX = evtobj.pageX - offset.left;
+    var posY = evtobj.pageY - offset.top;
     var sideCsq = centerY*centerY;
     var sideBsq = (posX-centerX)*(posX-centerX)+(posY-centerY)*(posY-centerY);
     var sideAsq = (posX-centerX)*(posX-centerX)+(posY)*(posY);
